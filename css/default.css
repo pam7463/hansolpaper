@@ -13,19 +13,31 @@
 }
 .container{
   width:100%;
-  max-width:1200px;
+  max-width:1240px;
   margin:0 auto;
+  padding:0 20px;
 }
+.skip_menu{padding:10px;text-align:center;background-color:#007dc6;position:fixed;left:0;top:-59px;width:100%;transition:0.2s;}
+.skip_menu.active{top:0;}
+.skip_menu a{display:inline-block;border:1px solid #fff;padding:6px 10px;color:#fff;}
+.skip_menu a:focus,.skip_menu a:hover{border-color:#000;color:#000;}
 
-/* 테블릿 스타일 */
+
+
+
+/* ===================테블릿 스타일====================== */
 @media(min-width:768px){
 
 }
 
 
-/* 피시 스타일 */
+
+
+
+/* ========================피시 스타일====================== */
 @media(min-width:1280px){
   .container{
     width:80%;
   }
+  /* .skip_menu{display:block;} */
 }
