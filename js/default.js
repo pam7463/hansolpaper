@@ -7,3 +7,8 @@ skipNav.focus(function(){
 skipNav.blur(function(){
   skipMenu.removeClass('active');
 });
+
+// 토글메뉴
+$('.tgl_btn').on('click',function(){
+  $(this).toggleClass('active');
+})
