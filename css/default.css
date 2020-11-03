@@ -1,0 +1,31 @@
+@charset 'utf-8';
+
+/* 기본스타일 */
+/* 모바일스타일 */
+*{
+  box-sizing:border-box;
+  font-family:Roboto,'Noto Sans KR',sans-serif;
+}
+.clearfix::after{
+  content:'';
+  display:block;
+  clear: both;
+}
+.container{
+  width:100%;
+  max-width:1200px;
+  margin:0 auto;
+}
+
+/* 테블릿 스타일 */
+@media(min-width:768px){
+
+}
+
+
+/* 피시 스타일 */
+@media(min-width:1280px){
+  .container{
+    width:80%;
+  }
+}
