@@ -26,15 +26,18 @@ $('.lang>a').on('click',function(){
 
 // 메인네비 클릭
 $('.main_nav>li>a').on('click',function(){
-  if($(this).hasClass('active')){
-    var winWidth = $(window).width();
-    $(this).removeClass('active');
-    $(this).next().slideUp(200);
-  }else{
-    closeSub();
-    $(this).addClass('active');
-    $(this).next().slideDown(200);
-  } 
+  var winWidth = $(window).width();
+  if(winWidth<1280){
+    if($(this).hasClass('active')){
+      var winWidth = $(window).width();
+      $(this).removeClass('active');
+      $(this).next().slideUp(200);
+    }else{
+      closeSub();
+      $(this).addClass('active');
+      $(this).next().slideDown(200);
+    } 
+  }
 })
 
 // 윈도우 리사이즈 이벤트
