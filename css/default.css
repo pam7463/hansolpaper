@@ -59,19 +59,30 @@
   .tgl_btn{display:none;}
   .nav{position:static;overflow:hidden;padding:0;}
   .lang,.nav_link,.main_nav>li>a::before,.main_nav>li>a::after{display:none;}
-  .main_nav{border:none;display:flex;flex-flow:row nowrap;justify-content:flex-end;}
-  .main_nav>li{margin-left:20px;}
+  .main_nav{margin:0;border:none;display:flex;flex-flow:row nowrap;justify-content:flex-end;}
+  .main_nav>li{margin:0 0 0 20px}
   .main_nav>li>a{font-size:1.2rem;}
+  /* .sub_nav{display:none !important;} */
 }
 
+
+@media(min-width:960px){
+  .nav{display:flex;flex-flow:row nowrap;justify-content:flex-end;align-items:center;}
+  .nav_link{display:block;margin-left: 3rem;}
+  .nav_link .customer{font-size:1rem;padding-top: 5px;}
+  .nav_link .sns a{width:30px;height:30px;}
+}
 
 
 
 
 /* ========================피시 스타일====================== */
 @media(min-width:1280px){
-  .container{
-    width:80%;
-  }
+  .container{width:80%;}
+  .lang{display:block;order:3;margin:0 0 0 16px;border:none;padding:0;}
+  .lang a:first-child{display:none;}
+  .lang a:last-child{display:block;width:30px;height:30px;border-radius:15px;padding:0;background-color:#777;font-size:0.8rem;text-align:center;line-height:30px;color:#fff;}
+  .main_nav{order:1;}
+  .nav_link{order:2;}
   /* .skip_menu{display:block;} */
 }
