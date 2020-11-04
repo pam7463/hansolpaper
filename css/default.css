@@ -16,7 +16,8 @@
 .skip_menu a:focus,.skip_menu a:hover{border-color:#000;color:#000;}
 
 /* 해더섹션 */
-.header{padding:24px 0;position:fixed;left:0;top:0;z-index:9;width:100%;}
+.header{padding:24px 0;position:fixed;left:0;top:0;z-index:9;width:100%;transition:0.3s;}
+.header.active{background-color:#fff;}
 .header_top{position:relative;z-index:9;}
 .logo_box{float:left;}
 .logo_box img{width:100px;}
@@ -49,23 +50,30 @@
 .nav_link .sns a img{width:100%;}
 
 
-
+.main_section{height:3000px;background-color:aquamarine;}
 
 
 
 /* ===================테블릿 스타일====================== */
 @media(min-width:768px){
+  .header{background-color:#fff;border-bottom:1px solid #eee;}
   .header .container{display:flex;justify-content:space-between;}
   .tgl_btn{display:none;}
-  .nav{position:static;overflow:hidden;padding:0;}
+  .nav{position:static;overflow:hidden;padding:0;background-color:transparent;}
   .lang,.nav_link,.main_nav>li>a::before,.main_nav>li>a::after{display:none;}
   .main_nav{margin:0;border:none;display:flex;flex-flow:row nowrap;justify-content:flex-end;}
-  .main_nav>li{margin:0 0 0 20px}
+  .main_nav>li{margin:0 0 0 20px;}
   .main_nav>li>a{font-size:1.2rem;}
-  /* .sub_nav{display:none !important;} */
+  .main_nav>li>a.active{color:#000;}
+  .sub_nav{padding:0;position:absolute;left:0;top:100%;}
+  .sub_nav li{display:inline-block;}
 }
 
 
+
+
+
+/* =========960px이상============ */
 @media(min-width:960px){
   .nav{display:flex;flex-flow:row nowrap;justify-content:flex-end;align-items:center;}
   .nav_link{display:block;margin-left: 3rem;}
@@ -84,5 +92,4 @@
   .lang a:last-child{display:block;width:30px;height:30px;border-radius:15px;padding:0;background-color:#777;font-size:0.8rem;text-align:center;line-height:30px;color:#fff;}
   .main_nav{order:1;}
   .nav_link{order:2;}
-  /* .skip_menu{display:block;} */
 }
