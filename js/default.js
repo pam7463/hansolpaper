@@ -73,6 +73,12 @@ $('.main_nav>li').hover(function(){
   }
 })
 
+var masterSlider = new Swiper('.main_slider',{
+  pagination: {
+    el: '.swiper-pagination',
+    type: 'bullets',
+  },
+});
 
-
+var slaveSlider = new Swiper('.papers_slider');
 
