@@ -73,6 +73,7 @@ $('.main_nav>li').hover(function(){
   }
 })
 
+// 메인섹션 이벤트들
 var masterSlider = new Swiper('.main_slider',{
   pagination: {
     el: '.swiper-pagination',
@@ -85,7 +86,17 @@ $('.btn_prev').on('click',function(){
 });
 $('.btn_next').on('click',function(){
   masterSlider.slideNext();
-})
+});
 
+var mainPag = $('.main_section .swiper-pagination span');
+mainPag[0].innerHTML='<h4>INSPER</h4>';
+mainPag[1].innerHTML='<h4>인쇄용지</h4>';
+mainPag[2].innerHTML='<h4>산업용지</h4>';
+mainPag[3].innerHTML='<h4>특수지</h4>';
+mainPag[4].innerHTML='<h4>감열지</h4>';
+
+
+
+// 페이퍼섹션 이벤트들
 var slaveSlider = new Swiper('.papers_slider');
 

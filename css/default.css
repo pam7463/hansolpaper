@@ -52,7 +52,13 @@
 .main_section{}
 .main_section .container{padding:0;}
 .main_slider picture img{width:100%;}
+.main_section .swiper-pagination{bottom:200px;}
+.main_section .swiper-pagination .swiper-pagination-bullet{margin:0;width:20%;height:2px;border-radius:0;transition:0.3s;}
+.main_section .swiper-pagination .swiper-pagination-bullet-active{background-color:#0f0;}
 .main_slider .swiper-button-prev,.main_slider .swiper-button-next{display:none;}
+.main_section .swiper-pagination span{text-align:center;font-size:1.2rem;color:#0f0;}
+.main_section .swiper-pagination span h4{margin-top:16px;}
+
 
 
 /* ===================테블릿 스타일====================== */
@@ -88,11 +94,11 @@
   .main_slider .swiper-slide{height:600px;display:flex;justify-content:center;align-items:center;overflow: hidden;}
   .main_slider picture img{width:auto;height:700px;}
   .main_slider .swiper-button-prev,.main_slider .swiper-button-next{display:block;}
-  .btn_prev,.btn_next{position: absolute;left:auto;right:auto;top:50%;z-index:2;transform:translateY(-50%);}
-  .btn_prev{left:30px;}
-  .btn_next{right:30px;}
+  .main_slider .btn_prev,.btn_next{position: absolute;left:auto;right:auto;top:50%;z-index:2;transform:translateY(-50%);}
+  .main_slider .btn_prev{left:30px;}
+  .main_slider .btn_next{right:30px;}
+  .main_section .swiper-pagination{width:80%;bottom:100px;left:50%;transform:translateX(-50%);}
 }
-
 
 
 
