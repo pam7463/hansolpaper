@@ -66,8 +66,11 @@ $(document).on('scroll',function(){
 
 // 내비가로좌표
 $('.main_nav>li').hover(function(){
-  var navOffset = $(this).offset().left;
-  $(this).children('.sub_nav').css('left',navOffset);
+  var winWidth = $(window).width();
+  if(winWidth>=1280){
+    var navOffset = $(this).offset().left;
+    $(this).children('.sub_nav').css('left',navOffset);
+  }
 })
 
 
