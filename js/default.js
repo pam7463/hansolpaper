@@ -81,10 +81,10 @@ var masterSlider = new Swiper('.main_slider',{
   }, 
 });
 
-$('.btn_prev').on('click',function(){
+$('.main_slider .btn_prev').on('click',function(){
   masterSlider.slidePrev();	
 });
-$('.btn_next').on('click',function(){
+$('.main_slider .btn_next').on('click',function(){
   masterSlider.slideNext();
 });
 
@@ -100,3 +100,10 @@ mainPag[4].innerHTML='<h4>감열지</h4>';
 // 페이퍼섹션 이벤트들
 var slaveSlider = new Swiper('.papers_slider');
 
+
+$('.papers_slider .btn_prev').on('click',function(){
+  slaveSlider.slidePrev();	
+});
+$('.papers_slider .btn_next').on('click',function(){
+  slaveSlider.slideNext();
+});
