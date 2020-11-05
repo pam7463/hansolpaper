@@ -77,8 +77,15 @@ var masterSlider = new Swiper('.main_slider',{
   pagination: {
     el: '.swiper-pagination',
     type: 'bullets',
-  },
+  }, 
 });
+
+$('.btn_prev').on('click',function(){
+  masterSlider.slidePrev();	
+});
+$('.btn_next').on('click',function(){
+  masterSlider.slideNext();
+})
 
 var slaveSlider = new Swiper('.papers_slider');
 

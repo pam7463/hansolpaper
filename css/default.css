@@ -18,7 +18,6 @@
 /* 해더섹션 */
 .header{padding:24px 0;position:fixed;left:0;top:0;z-index:9;width:100%;transition:0.3s;}
 .header.active{background-color:#fff;}
-.header::before{content:'';display:block;width:100%;height:88px;background-color:#fff;position: absolute;left:0;top:0;z-index:9;}
 .header_top{position:relative;z-index:9;}
 .logo_box{float:left;}
 .logo_box img{width:100px;}
@@ -50,12 +49,16 @@
 .nav_link .sns a{display:inline-block;width:40px;height:40px;margin-left:10px;}
 .nav_link .sns a img{width:100%;}
 
-
+.main_section{}
+.main_section .container{padding:0;}
+.main_slider picture img{width:100%;}
+.main_slider .swiper-button-prev,.main_slider .swiper-button-next{display:none;}
 
 
 /* ===================테블릿 스타일====================== */
 @media(min-width:768px){
   .header{background-color:#fff;border-bottom:1px solid #eee;}
+  .header::before{content:'';display:block;width:100%;height:88px;background-color:#fff;position: absolute;left:0;top:0;z-index:9;}
   .header::before{display:none;}
   .header .container{display:flex;justify-content:space-between;}
   .tgl_btn{display:none;}
@@ -81,6 +84,13 @@
   .nav_link{display:block;margin-left: 3rem;}
   .nav_link .customer{font-size:1rem;padding-top: 5px;}
   .nav_link .sns a{width:30px;height:30px;}
+
+  .main_slider .swiper-slide{height:600px;display:flex;justify-content:center;align-items:center;overflow: hidden;}
+  .main_slider picture img{width:auto;height:700px;}
+  .main_slider .swiper-button-prev,.main_slider .swiper-button-next{display:block;}
+  .btn_prev,.btn_next{position: absolute;left:auto;right:auto;top:50%;z-index:2;transform:translateY(-50%);}
+  .btn_prev{left:30px;}
+  .btn_next{right:30px;}
 }
 
 
@@ -93,8 +103,9 @@
   .lang a:first-child{display:none;}
   .lang a:last-child{display:block;width:30px;height:30px;border-radius:15px;padding:0;background-color:#777;font-size:0.8rem;text-align:center;line-height:30px;color:#fff;}
   .main_nav{order:1;}  
-  /* .main_nav>li{position: relative;}
-  .main_nav>li::before{content:'';display:block;width:100%;height:100px;position: absolute;left:0;top:0;} */
   .main_nav>li:hover .sub_nav{display:block !important;}
   .nav_link{order:2;}
+
+  .main_section{}
+  .main_section .container{width:100%;}
 }
