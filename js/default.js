@@ -98,8 +98,12 @@ mainPag[4].innerHTML='<h4>감열지</h4>';
 
 
 // 페이퍼섹션 이벤트들
-var slaveSlider = new Swiper('.papers_slider');
-
+var slaveSlider = new Swiper('.papers_slider',{
+  pagination: {
+    el: '.swiper-pagination',
+    type: 'bullets',
+  }, 
+});
 
 $('.papers_slider .btn_prev').on('click',function(){
   slaveSlider.slidePrev();	
